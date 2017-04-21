@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alc.alcdemo.view.developer.DeveloperActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#4D4D4D">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="357dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.73"
+            android:background="@drawable/bg_btn"
+            android:contentDescription="@string/github_profile_avatar" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/RobotoCondensedText"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:textColor="#4D4D4D"
+            tools:text="Agileflow" />
+
+        <Button
+            android:id="@+id/btn_github_profile_url"
+            style="@style/RobotoCondensedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            tools:text="github.com/agileflow" />
+
+        <include layout="@layout/item_divider" />
+
+        <Button
+            android:id="@+id/btn_share"
+            style="@style/RobotoCondensedText"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_share_black_24dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

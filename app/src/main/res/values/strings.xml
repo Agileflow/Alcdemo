@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ALC demo</string>
+
+    <string name="title">Lagos Java Developers</string>
+
+    <string name="loading">Loading</string>
+
+    <string name="btn_share">share</string>
+
+    <string name="share_dev_details">Share Developer Details</string>
+
+    <string name="github_profile_avatar">Github Profile Image</string>
+
+</resources>
