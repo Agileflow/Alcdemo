@@ -1,7 +1,10 @@
 package com.alc.alcdemo.controller;
 
+import com.alc.alcdemo.model.QueryResult;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -11,5 +14,5 @@ import retrofit2.http.Query;
 public interface GithubSearchAPI {
 
     @GET("/search/users")
-    Call<QueryResult> getDevelopers(@Query(value = "q",encoded = true) String userSearchQualifiers, @Query("per_page") String pageCount, @Query(value ="access_token",encoded = true) String token);
+    Call<QueryResult> getDevelopers(@Query(value = "q",encoded = true) String userSearchQualifiers, @Query("per_page") String pageCount);
 }

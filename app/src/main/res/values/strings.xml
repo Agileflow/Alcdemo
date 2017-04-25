@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ALC demo</string>
 
-    <string name="title">Lagos Java Developers</string>
+    <string name="app_title">Java Developers - Lagos</string>
 
     <string name="loading">Loading</string>
 

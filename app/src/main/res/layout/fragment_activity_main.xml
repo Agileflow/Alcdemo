@@ -6,12 +6,6 @@
     android:orientation="vertical"
     tools:context="com.alc.alcdemo.view.main.MainFragment">
 
-    <View
-        android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        />
-
     <FrameLayout
         android:id="@+id/loading"
         android:layout_width="match_parent"
@@ -21,7 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <android.support.v4.widget.ContentLoadingProgressBar
                 android:id="@+id/contentLoadingProgressBar"

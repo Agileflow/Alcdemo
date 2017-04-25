@@ -2,7 +2,7 @@ package com.alc.alcdemo.view.developer;
 
 import android.net.Uri;
 
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 
 /**
  * Created by agileflow on 4/21/2017.
@@ -27,6 +27,8 @@ public class DeveloperPresenter implements DeveloperContract.UserActionListener 
         mDevDetailsView.showProfilePhoto(developer.getAvatarUrl());
         mDevDetailsView.showUsername(developer.getUsername());
         mDevDetailsView.showProfileUrl(developer.getGithubUrl());
+        mDevDetailsView.showFollowers(developer.getFollowers());
+        mDevDetailsView.showRepository(developer.getRepository());
     }
 
     @Override

@@ -1,32 +1,50 @@
 package com.alc.alcdemo.model;
 
-import android.graphics.Bitmap;
+import com.alc.alcdemo.support.Helper;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+import retrofit2.http.GET;
 
 /**
  * Created by agileflow on 4/21/2017.
  */
 
-public class Developer {
+public class Developer implements Serializable {
 
-    private final String username;
-    private final Bitmap avatar;
-    private final String githubUrl;
+    @SerializedName("login")
+    private String username;
 
-    public Developer(String username, Bitmap avatar, String githubUrl){
-        this.username = username;
-        this.avatar = avatar;
-        this.githubUrl = githubUrl;
+    @SerializedName("avatar_url")
+    private String avatarUrl;
+
+    @SerializedName("html_url")
+    private String githubUrl;
+
+    @SerializedName("followers_url")
+    private String followers;
+
+    @SerializedName("repos_url")
+    private String repository;
+
+    public String getGithubUrl() {
+        return githubUrl;
     }
 
-    public String getUsername(){
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public String getUsername() {
         return username;
     }
 
-    public Bitmap getAvatar(){
-        return avatar;
+    public String getFollowers() {
+        return "-";
     }
 
-    public String getGithubUrl(){
-        return githubUrl;
+    public String getRepository() {
+        return "-";
     }
 }

@@ -2,7 +2,7 @@ package com.alc.alcdemo.view.developer;
 
 import android.net.Uri;
 
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 
 /**
  * Created by agileflow on 4/21/2017.
@@ -17,6 +17,10 @@ public class DeveloperContract {
         void showProfilePhoto(String profilePhotoUrl);
 
         void showUsername(String username);
+
+        void showFollowers(String followers);
+
+        void showRepository(String repos);
 
         void launchShareIntent(String username,String profileUrl);
 

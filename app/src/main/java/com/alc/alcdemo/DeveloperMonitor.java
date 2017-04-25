@@ -1,9 +1,9 @@
 package com.alc.alcdemo;
 
 
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 import com.alc.alcdemo.controller.GithubSearchAPI;
-import com.alc.alcdemo.controller.QueryResult;
+import com.alc.alcdemo.model.QueryResult;
 
 import com.alc.alcdemo.support.Constants;
 
@@ -14,7 +14,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Query;
 
 /**
  * Created by agileflow on 4/21/2017.
@@ -28,7 +27,7 @@ public class DeveloperMonitor {
         void onDevelopersLoadFailure(String errorMessage);
     }
 
-    public static void getDevelopers(String searchQualifiers, final OnDevelopersLoadedListener developersLoadedListener){
+    public static void getDevelopers(String query, final OnDevelopersLoadedListener developersLoadedListener){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -36,7 +35,7 @@ public class DeveloperMonitor {
 
         GithubSearchAPI apiService = retrofit.create(GithubSearchAPI.class);
 
-        Call<QueryResult> call = apiService.getDevelopers(searchQualifiers,Constants.PER_PAGE,Constants.ACCESS_TOKEN);
+        Call<QueryResult> call = apiService.getDevelopers(query,Constants.PER_PAGE);
 
         call.enqueue(new Callback<QueryResult>() {
             @Override

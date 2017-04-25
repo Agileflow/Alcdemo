@@ -15,8 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alc.alcdemo.R;
+import com.alc.alcdemo.support.Constants;
 import com.alc.alcdemo.view.developer.DeveloperActivity;
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 import com.alc.alcdemo.support.Helper;
 
 import com.squareup.picasso.Picasso;
@@ -34,7 +35,6 @@ import butterknife.ButterKnife;
 public class MainFragment extends Fragment implements MainContract.View{
 
     @BindView(R.id.developers_rv)
-
     RecyclerView recyclerView_developers;
 
     @BindView(R.id.loading)
@@ -74,13 +74,13 @@ public class MainFragment extends Fragment implements MainContract.View{
 
     private void setupRecyclerView(){
         recyclerView_developers.setAdapter(adapter_developers);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(StaggeredGridLayoutManager.VERTICAL,StaggeredGridLayoutManager.VERTICAL);
         recyclerView_developers.setLayoutManager(layoutManager);
     }
 
     private void loadDevelopers(){
-        String searchQualifiers = "location:lagos+type:user+language:java";
-        actionListener.loadDevelopers(searchQualifiers);
+        String query = "" + Constants.LOCATION + ":" + Constants.LOCATION_VALUE + "+" + Constants.TYPE + ":" + Constants.TYPE_VALUE + "+" + Constants.LANGUAGE + ":" + Constants.LANGUAGE_VALUE;
+        actionListener.loadDevelopers(query);
     }
 
 
@@ -93,7 +93,7 @@ public class MainFragment extends Fragment implements MainContract.View{
     @Override
     public void openDevDetails(Developer developer) {
         Intent intent = new Intent(getContext(),DeveloperActivity.class);
-        intent.putExtra(DeveloperActivity.EXTRA_DEVELOPER,developer);
+        intent.putExtra(Constants.DEVELOPER,developer);
         startActivity(intent);
     }
 
@@ -146,6 +146,8 @@ public class MainFragment extends Fragment implements MainContract.View{
 
             holder.loadImage(developer.getAvatarUrl());
             holder.usernameTextView.setText(developer.getUsername());
+            holder.userRepos.setText(developer.getRepository());
+            holder.userFollowers.setText(developer.getFollowers());
         }
 
         @Override
@@ -165,11 +167,17 @@ public class MainFragment extends Fragment implements MainContract.View{
         class ViewHolder extends RecyclerView.ViewHolder{
             private OnDeveloperItemClickedListener itemClickedListener;
 
-            @BindView(R.id.github_profile_thumbnail)
-            ImageView thumbnailImageView;
+            @BindView(R.id.dev_avatar)
+            ImageView avatarView;
 
             @BindView(R.id.dev_username)
             TextView usernameTextView;
+
+            @BindView(R.id.dev_repos)
+            TextView userRepos;
+
+            @BindView(R.id.dev_followers)
+            TextView userFollowers;
 
 
             public ViewHolder(View itemView,OnDeveloperItemClickedListener itemClickedListener) {
@@ -192,13 +200,13 @@ public class MainFragment extends Fragment implements MainContract.View{
             };
 
             private void loadImage(String imageUrl){
-                Context context = thumbnailImageView.getContext();
+                Context context = avatarView.getContext();
 
                 Picasso.with(context)
                         .load(imageUrl)
                         .placeholder(R.drawable.placeholder_icon)
                         .error(R.drawable.placeholder_icon)
-                        .into(thumbnailImageView);
+                        .into(avatarView);
             }
 
 

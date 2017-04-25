@@ -23,44 +23,114 @@
         android:weightSum="1">
 
         <ImageView
-            android:id="@+id/iv_profile_pic"
+            android:id="@+id/dev_avatar"
             android:layout_width="357dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:layout_weight="0.73"
-            android:background="@drawable/bg_btn"
+            android:background="@drawable/img_bg"
             android:contentDescription="@string/github_profile_avatar" />
 
         <TextView
-            android:id="@+id/tv_username"
-            style="@style/RobotoCondensedText"
+            android:id="@+id/dev_username"
+            style="@style/CondensedText"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:textColor="#4D4D4D"
             tools:text="Agileflow" />
 
-        <Button
-            android:id="@+id/btn_github_profile_url"
-            style="@style/RobotoCondensedText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:background="@android:color/transparent"
-            android:textAllCaps="false"
-            android:textColor="#808080"
-            android:textSize="16sp"
-            tools:text="github.com/agileflow" />
+        <include layout="@layout/item_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/followers"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="43dp"
+                android:src="@drawable/github_50" />
+
+            <TextView
+                android:id="@+id/dev_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/followers"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                tools:text="0" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/repos"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="43dp"
+                android:src="@drawable/repository_50" />
+
+            <TextView
+                android:id="@+id/dev_repos"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/repos"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                tools:text="0" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="59dp"
+                android:src="@drawable/ic_insert_link_black_24dp" />
+
+            <Button
+                android:id="@+id/dev_github_profile_url"
+                style="@style/CondensedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:background="@android:color/transparent"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                tools:text="github.com/agileflow" />
+
+        </RelativeLayout>
 
         <include layout="@layout/item_divider" />
 
         <Button
-            android:id="@+id/btn_share"
-            style="@style/RobotoCondensedText"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/share_icon"
+            android:layout_width="44dp"
+            android:layout_height="34dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_share_black_24dp"
             android:textAllCaps="false"

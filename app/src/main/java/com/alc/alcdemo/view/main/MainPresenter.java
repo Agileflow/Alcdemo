@@ -1,7 +1,7 @@
 package com.alc.alcdemo.view.main;
 
 import com.alc.alcdemo.DeveloperMonitor;
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 
 import java.util.List;
 

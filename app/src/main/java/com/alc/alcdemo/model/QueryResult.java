@@ -1,6 +1,7 @@
-package com.alc.alcdemo.controller;
+package com.alc.alcdemo.model;
 
 import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**

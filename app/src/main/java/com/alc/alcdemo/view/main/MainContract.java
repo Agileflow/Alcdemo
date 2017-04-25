@@ -1,6 +1,6 @@
 package com.alc.alcdemo.view.main;
 
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 import java.util.List;
 
 /**
@@ -24,7 +24,7 @@ public class MainContract {
     interface UserActionListener{
         void showDevDetail(Developer developer);
 
-        void loadDevelopers(String searchQualifiers);
+        void loadDevelopers(String query);
     }
 }
 

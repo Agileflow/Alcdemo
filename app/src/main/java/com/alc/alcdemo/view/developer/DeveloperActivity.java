@@ -8,14 +8,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.alc.alcdemo.R;
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
+import com.alc.alcdemo.support.Constants;
 
 /**
  * Created by agileflow on 4/21/2017.
  */
 
 public class DeveloperActivity extends AppCompatActivity {
-    public static final String EXTRA_DEVELOPER = "developer";
 
 
     @Override
@@ -25,8 +25,8 @@ public class DeveloperActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        if(intent.hasExtra(EXTRA_DEVELOPER)){
-            Developer dev = (Developer) intent.getSerializableExtra(EXTRA_DEVELOPER);
+        if(intent.hasExtra(Constants.DEVELOPER)){
+            Developer dev = (Developer) intent.getSerializableExtra(Constants.DEVELOPER);
             DeveloperFragment fragment = DeveloperFragment.newInstance(dev);
             initFragment(fragment);
         }

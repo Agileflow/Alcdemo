@@ -12,9 +12,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alc.alcdemo.controller.Developer;
+import com.alc.alcdemo.model.Developer;
 import com.alc.alcdemo.R;
 
+import com.alc.alcdemo.support.Constants;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -27,18 +28,22 @@ import butterknife.OnClick;
 
 public class DeveloperFragment extends Fragment implements DeveloperContract.View{
 
-    public static final String ARG_DEVELOPER = "developer";
-
-    @BindView(R.id.iv_profile_pic)
+    @BindView(R.id.dev_avatar)
     ImageView profilePicImageView;
 
-    @BindView(R.id.btn_github_profile_url)
+    @BindView(R.id.dev_github_profile_url)
     Button profileUrlButton;
 
-    @BindView(R.id.tv_username)
+    @BindView(R.id.dev_username)
     TextView usernameTextView;
 
-    @BindView(R.id.btn_share)
+    @BindView(R.id.dev_followers)
+    TextView followersTextView;
+
+    @BindView(R.id.dev_repos)
+    TextView reposTextView;
+
+    @BindView(R.id.share_icon)
     Button shareButton;
 
     private DeveloperContract.UserActionListener actionListener;
@@ -53,7 +58,7 @@ public class DeveloperFragment extends Fragment implements DeveloperContract.Vie
 
     public static DeveloperFragment newInstance(Developer dev){
         Bundle args = new Bundle();
-        args.putSerializable(ARG_DEVELOPER,dev);
+        args.putSerializable(Constants.DEVELOPER,dev);
 
         DeveloperFragment devDetailFragment = new DeveloperFragment();
         devDetailFragment.setArguments(args);
@@ -75,7 +80,7 @@ public class DeveloperFragment extends Fragment implements DeveloperContract.Vie
     @Override
     public void onResume() {
         super.onResume();
-        actionListener.openDevDetails((Developer) getArguments().getSerializable(ARG_DEVELOPER));
+        actionListener.openDevDetails((Developer) getArguments().getSerializable(Constants.DEVELOPER));
     }
 
 
@@ -99,6 +104,16 @@ public class DeveloperFragment extends Fragment implements DeveloperContract.Vie
     }
 
     @Override
+    public void showFollowers(String followers) {
+        followersTextView.setText(followers);
+    }
+
+    @Override
+    public void showRepository(String repos) {
+        reposTextView.setText(repos);
+    }
+
+    @Override
     public void launchShareIntent(String username, String profileUrl) {
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);
@@ -111,13 +126,13 @@ public class DeveloperFragment extends Fragment implements DeveloperContract.Vie
         }
     }
 
-    @OnClick(R.id.btn_github_profile_url)
+    @OnClick(R.id.dev_github_profile_url)
     public void openLink(){
         String profileUrl = profileUrlButton.getText().toString();
         actionListener.openWebPage(profileUrl);
     }
 
-    @OnClick(R.id.btn_share)
+    @OnClick(R.id.share_icon)
     public void shareGithubProfile(){
         String username = usernameTextView.getText().toString();
         String profileUrl = profileUrlButton.getText().toString();
