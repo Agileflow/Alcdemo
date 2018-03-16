@@ -1,0 +1,86 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:7:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\olusanjo dare\.android\build-cache\7fb99a398edc39e7e47d6507c76510ecbfac10e5\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.2.0] C:\Users\olusanjo dare\.android\build-cache\6223dbd33f2b5d1a600b2560b945f930e7ff7c8a\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\olusanjo dare\.android\build-cache\166e2e4851b791fb18d259fbd07eb11319029986\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\olusanjo dare\.android\build-cache\77d46a7b7f2e68b3c78f068b2ffefa3e15e78bd3\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\olusanjo dare\.android\build-cache\266aae8904bbea0f83f494ac061ee5ee48153b91\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.2.0] C:\Users\olusanjo dare\.android\build-cache\cfa18de01034cad9fdbd5d28434b09230fd04347\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\olusanjo dare\.android\build-cache\d497afb0887f5deb84f0cb664d9361a3b12aefd0\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\olusanjo dare\.android\build-cache\8e73b06d48210e67a9c52ec766985e85e08c6783\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\olusanjo dare\.android\build-cache\79f42eb03a7d4bb284d8e0b25b92ef48e47f5405\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\olusanjo dare\.android\build-cache\f892a1b6e0aa13b447ffe418e2f47260ceb2b505\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\olusanjo dare\.android\build-cache\487a14e35b3f3695462a7bf3f0fd190595ddd51e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\olusanjo dare\.android\build-cache\591c4d22e8e1ea8f03bb0315bd6a7f305cfdfe00\output\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:10:9-41
+	android:supportsRtl
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:12:9-35
+	android:roundIcon
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:11:9-54
+	android:allowBackup
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:8:9-35
+	android:icon
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:9:9-46
+	android:theme
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:13:9-40
+activity#com.alc.alc_demo.MainActivity
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:14:9-23:20
+	android:label
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:16:13-45
+	android:theme
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:17:13-56
+	android:name
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:15:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\olusanjo dare\.android\build-cache\7fb99a398edc39e7e47d6507c76510ecbfac10e5\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.2.0] C:\Users\olusanjo dare\.android\build-cache\6223dbd33f2b5d1a600b2560b945f930e7ff7c8a\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\olusanjo dare\.android\build-cache\166e2e4851b791fb18d259fbd07eb11319029986\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\olusanjo dare\.android\build-cache\77d46a7b7f2e68b3c78f068b2ffefa3e15e78bd3\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\olusanjo dare\.android\build-cache\266aae8904bbea0f83f494ac061ee5ee48153b91\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\olusanjo dare\.android\build-cache\fe93f92203eed2dd3c81cd78069e83733d582342\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.2.0] C:\Users\olusanjo dare\.android\build-cache\cfa18de01034cad9fdbd5d28434b09230fd04347\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\olusanjo dare\.android\build-cache\d497afb0887f5deb84f0cb664d9361a3b12aefd0\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\olusanjo dare\.android\build-cache\8e73b06d48210e67a9c52ec766985e85e08c6783\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\olusanjo dare\.android\build-cache\79f42eb03a7d4bb284d8e0b25b92ef48e47f5405\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\olusanjo dare\.android\build-cache\f892a1b6e0aa13b447ffe418e2f47260ceb2b505\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\olusanjo dare\.android\build-cache\487a14e35b3f3695462a7bf3f0fd190595ddd51e\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\olusanjo dare\.android\build-cache\591c4d22e8e1ea8f03bb0315bd6a7f305cfdfe00\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.2.0] C:\Users\olusanjo dare\.android\build-cache\6223dbd33f2b5d1a600b2560b945f930e7ff7c8a\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Abbey\AndroidStudioProjects\ALC_Demo\app\src\main\AndroidManifest.xml
